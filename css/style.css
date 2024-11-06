@@ -115,6 +115,7 @@ padding: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #fff;
 }
 
 #showcase .showcase-container{
@@ -127,3 +128,82 @@ padding: 30px;
     font-size: 1.5rem;
     padding: 0 20px;
 }
+/* Seccion Info */
+#info{
+    display: flex;
+    min-height: 30vh;
+}
+#info .info-img{
+    background: url(../img/photo-1.jpg) no-repeat center center/cover;
+    flex: 1 1 auto;
+}
+#info .info-content{
+    background-color: #333;
+    color: #fff;
+    flex: 1 0 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+/* SECTION FEATURES */
+#features {
+    display: flex;
+}
+#features .box{
+padding: 30px;
+text-align: center;
+}
+#features .box i{ 
+    /* LOS ICONOS SE TRATAN COMO FUENTES DE TEXTO */
+    font-size: 5rem;
+    margin-bottom: 1rem;
+
+}
+/* Main Footer */
+#main-footer{
+    text-align: center;
+    padding: 20px;
+}
+/* ------------------------------------------ */
+
+/* -------------------------------------------------- */
+ 
+@media only screen and (max-width: 530px) {
+   #showcase{
+    height: 100vh;
+   }
+   #showcase .showcase-container h2{
+    font-size: 2.5rem;
+    margin: 10px;
+    padding: 40px;
+   }
+   #showcase .showcase-container p{
+       font-size: 20px;
+       padding: 0 0px;
+   }
+   #features {
+       display: inline;
+   }
+
+   #info{
+    display: flex;
+    min-height: 30vh;
+   }
+   #info .info-img{
+       background: url(../img/photo-1.jpg) no-repeat    center center/cover;
+       flex: 0 1 auto;
+   }
+   /* --------------------------------------- */
+   /* Menu Hambuerger */
+
+         #hamburger-menu{
+         display:block
+        }
+
+         #top-menu .top-menu-container{
+         display: none;
+         }
+   }
+   /* --------------------------------------- */
