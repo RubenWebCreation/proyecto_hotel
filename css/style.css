@@ -28,6 +28,10 @@ p{
     margin: 10px;
 }
 
+img{
+    width: 100%;
+}
+
 /* Utilidades */
 .container{
     max-width: 960px;
@@ -287,47 +291,7 @@ text-align: center;
   #menu-container{
     display:none;
    }
-/* -------------------------------------------------- */
- 
-@media only screen and (max-width: 530px) {
-   #showcase{
-    height: 100vh;
-   }
-   #showcase .showcase-container h2{
-    font-size: 2.5rem;
-    margin: 10px;
-    padding: 40px;
-   }
-   #showcase .showcase-container p{
-       font-size: 20px;
-       padding: 0 0px;
-   }
-   #features {
-       display: inline;
-   }
-
-   #info{
-    display: flex;
-    min-height: 30vh;
-   }
-   #info .info-img{
-       background: url(../img/photo-1.jpg) no-repeat    center center/cover;
-       flex: 0 1 auto;
-   }
-   /* --------------------------------------- */
-   /* Menu Hamburger */
-
-         .menu-container{
-         display:block;
-         position: fixed;
-        }
-
-         #top-menu .top-menu-container{
-         display: none;
-         }
-   }
-   /* --------------------------------------- */
-
+/* ----------------------------------------------- */
    /* PAGINA CONOCENOS */
    .showcase-2{
     display: flex;
@@ -378,5 +342,93 @@ text-align: center;
     #showcase-3 img{
         border-radius: 50%;
     }
-    #showcase-3 p{
+    /* ----------------------------------------- */
+    /* EXPLICACION ABOUT */
+    #about-info{
+    display: flex;
+    height: 50vh;
+    }
+    #about-info .about-info-left{
+    flex: 2;
+    }
+    #about-info .about-info-right{
+    flex: 1;
+    }
+    #about-info .about-info-right img{
+        padding: 20px;
+    border-radius: 50%;
+    }
+    /* testimoniaL */
+    #testimonial {
+        background: url(../img/test-bg.jpg) no-repeat center center/cover;
+        text-align: center;
+        padding-top:30px ;
+    }
+    #testimonial h2{
+        font-size: 2rem;
+        color: #fff;
+    }
+    #testimonial .opinions{
+        display: flex;
+        gap: 40px;
+    }
+    #testimonial .opinions .opinions-box{
+        padding: 20px;
+        margin: 40px;
+        border-radius: 8px;
+        text-align: left;
+        opacity: 0.9;
+    }
+    #testimonial .opinions .opinions-box img{
+        width: 100px;
+        border-radius: 50%;
+        float: left;
+        margin-left: 10px;
+    }
+   /*--------------------------------------------*/
+ 
+@media only screen and (max-width: 768px) {
+   #showcase{
+    height: 100vh;
+   }
+   #showcase .showcase-container h2{
+    font-size: 2.5rem;
+    margin: 10px;
+    padding: 40px;
+   }
+   #showcase .showcase-container p{
+       font-size: 20px;
+       padding: 0 0px;
+   }
+   #features {
+       display: inline;
+   }
+
+   #info{
+    display: flex;
+    min-height: 30vh;
+   }
+   #info .info-img{
+       background: url(../img/photo-1.jpg) no-repeat    center center/cover;
+       flex: 0 1 auto;
+   }
+   /* --------------------------------------- */
+   /* Menu Hamburger */
+
+     .menu-container{
+     display:block;
+     position: fixed;
+    }
+     #top-menu .top-menu-container{
+     display: none;
+     }
+   /* --------------------------------------- */
+   /* About Modo Movil */
+   #about-info .about-info-right{
+    flex: 0;
+   }
+   #testimonial .opinions{
+    flex-direction: column;
+    gap: 10px;
+   }
 }
