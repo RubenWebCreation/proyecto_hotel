@@ -5,12 +5,13 @@
     box-sizing: border-box;
 }
 :root {
-    --color-primario: rgba(9, 30, 34, 0.678);
-    --color-secundario: rgba(229, 148, 0, 0.9);
+    --color-primario: purple;
+    --color-secundario: magenta ;
     --hamburger-size: 60px;
     --menu-speed: 0.75s;
 }
 html, body{
+   background-color: #3b244b;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.7rem;
     height: 100vh;
@@ -24,6 +25,7 @@ a{
 h1,h2,h3{
     padding-bottom: 20px;
 }
+
 p{
     margin: 10px;
 }
@@ -33,6 +35,11 @@ img{
 }
 
 /* Utilidades */
+
+.my-input {
+    margin-top: 1rem;
+  }
+
 .container{
     max-width: 960px;
     margin: 0 auto;
@@ -49,8 +56,8 @@ img{
     margin-top: 10px;
 }
 .btn:hover{
-    background-color: #f7c08a;
-    color: #333;
+    background-color: #ffffff;
+    color: #631e69;
 }
 /* colores para reutilizar */
 .bg-dark{
@@ -83,20 +90,39 @@ padding: 30px;
 
 /* NAVBAR */
 #top-menu{
-    background-color: #333;
-    color: #fff;
+   
+   position: fixed;
+   height: 8%;
+   width: 100%;
+   background-color: #00000056;
+    /* background: url(../images/The_Last_Reality_-_The_End_-_Fortnite.webp)no-repeat center center/cover; */
+    color: #490066;
+    font-size: 20px;
+    padding: 5px;
+    border-bottom: #ffbd09b6 solid 5px;
+    
 }
 #top-menu a {
-    color: #fff;
+    background: linear-gradient(
+        to left,
+        rgb(255, 255, 255),
+        rgb(222, 93, 226)
+      );
+      background-clip: text;
+      color: transparent;
 }
 
 #top-menu h1{
     margin-left: 10px;
 }
 #top-menu .top-menu-container{
+    max-width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    align-content: space-between;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
 }
 #top-menu .top-menu-container ul{
     list-style: none;
@@ -106,329 +132,209 @@ padding: 30px;
 #top-menu .top-menu-container ul a{
     display: inline-block;
     padding: 20px;
+    font-weight: bold;
 }
 #top-menu .top-menu-container ul a:hover{
-    background-color: #444;
-    color: #f88844;
+    color: #f7cb6c;
+    transition: all 0.5s;
 }
-#top-menu .top-menu-container ul a.active{
-    /* background-color: #444;
-    color: #f88844; */
-    border-bottom: #f88844 solid 5px;
-}
-/* FIN MENU */
 
-/* sHOWCASE */
-#showcase{
-    height: 50vh;
-    background: url(../img/showcase.jpg) no-repeat center center/cover;
+
+/* -------------------------------------- */
+#cabezado{
+    background: url(../images/screen_comp-1508.jpeg) no-repeat top center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: #ffffff;
 }
 
-#showcase .showcase-container{
+#cabezado .cabecera{
+    height: 70vh;
+    padding: 110px;
     text-align: center;
+    align-content: flex-start;
 }
-#showcase .showcase-container h2{
+#cabezado .cabecera h2{
+    text-shadow: #000000 10px 10px 10px;
     font-size: 2rem;
 }
-#showcase .showcase-container p{
+#cabezado .cabecera p{
     font-size: 1.5rem;
-    padding: 0 20px;
+    padding: 0 40px;
+    font-weight: bold;
+    text-shadow: #000000 10px 10px 10px;
 }
-/* Seccion Info */
-#info{
-    display: flex;
-    min-height: 30vh;
+/* --------------------------------------- */
+.sub-facciones{
+    background:url(../images/Dark_Series_-_Rarity_-_Fortnite.webp) no-repeat center center/cover;
 }
-#info .info-img{
-    background: url(../img/photo-1.jpg) no-repeat center center/cover;
-    flex: 1 1 auto;
+#ejercito{
+    height: 8vh;
+    background: linear-gradient(
+        to left,
+        rgb(252, 164, 0),
+        rgb(222, 93, 226)
+      );
+      background-clip: text;
+      color: transparent;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
 }
-#info .info-content{
-    background-color: #333;
-    color: #fff;
-    flex: 1 0 0%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+#ejercito img{
+max-width: 200px;
+max-height: 200px;
 }
-/* SECTION FEATURES */
-#features {
-    display: flex;
-}
-#features .box{
-padding: 30px;
-text-align: center;
-}
-#features .box i{ 
-    /* LOS ICONOS SE TRATAN COMO FUENTES DE TEXTO */
-    font-size: 5rem;
-    margin-bottom: 1rem;
 
-}
-/* Main Footer */
-#main-footer{
+#ejercito h2{
+    padding: 0;
+    margin: 0;
+    font-size: 1.9rem;
+    display: flex;
     text-align: center;
-    padding: 20px;
+    
 }
-/* ------------------------------------------ */
-.menu-container {
-    display: none;
-   
-    top: 0;
-    z-index: 1;
-    right: var(--hamburger-size);
-  }
-  .menu-container .toggler {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    opacity: 0%;
-  }
-  /* Contenedor para el icono del menu */
-  .menu-container .hamburger {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 1;
-    width: var(--hamburger-size);
-    height: var(--hamburger-size);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem;
-    background-color: var(--color-secundario);
-  }
-
-  /* Dibujar las lineas del menu */
-  .menu-container .hamburger > div {
-    width: 100%;
-    height: 5px;
-    background-color: #fff;
-    position: relative;
-    transition: all 0.4s ease;
-  }
-  .menu-container .hamburger > div::before,
-  .menu-container .hamburger > div::after {
-    /* FIJARSE EN EL CONTENT */
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 5px;
-    top: -15px;
-    z-index: 100;
-    background-color: inherit;
-  }
-  .menu-container .hamburger > div::after {
-    top: 15px;
-  }
-  /* -------------------------------- */
-
-  /* ANIMACION DEL  ICONO DEL MENU */
-  .menu-container .toggler:checked + .hamburger > div {
-    transform: rotate(135deg);
-  }
-  .menu-container .toggler:checked + .hamburger > div::before,
-  .menu-container .toggler:checked + .hamburger > div::after {
-    transform: rotate(90deg);
-    top: 0;
-  }
-
-  .menu-container .toggler:checked:hover + .hamburger > div {
-    transform: rotate(225deg);
-  }
-  /* -------------------------------- */
-
-  /* CSS PARA LA CAPA DEL MENU */
-  .menu-container .menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* visibility: hidden; */
-    transform: translateX(100vw);
-    transition: all 0.5s ease;
-    background-color: #333333ef;
-    border: #f88844 solid 0.5rem;
-    border-top: #333;
-    border-bottom: #333;
-  }
-  /* ANIMACION LETRAS */
-  .menu-container .menu ul li {
-    background-color: #444;
-    color: #f88844;
-    background-clip: text;
-    list-style: none;
-    font-size: 5rem;
-    padding: 4rem;
-  }
-  .menu-container .menu ul li a {
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.5s ease;
-  }
-  .menu-container .menu ul li a:hover {
-    color: rgb(248, 225, 195);
-  }
-  .menu-container .toggler:checked ~ .menu {
-    /* visibility: visible; */
-    transform: translateX(0);
-  }
-  
-  #menu-container{
-    display:none;
-   }
-/* ----------------------------------------------- */
-   /* PAGINA CONOCENOS */
-   .showcase-2{
-    display: flex;
-    padding: 100px;
-
-   }
-   .showcase-2 img{
-    flex: 1;
-    height: 30vh;
-    border-radius: 50%;
-   }
-   .showcase-2 h2 p{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-   }
-      
-   .showcase-2 .showcase-container{
-       text-align: center;
-   }
-   .showcase-2 .showcase-container h2{
-       font-size: 2rem;
-   }
-   .showcase-2 .showcase-container p{
-       font-size: 1.5rem;
-       padding: 0 20px;
-   }
-   #showcase-3{
-    height: 50vh;
-    background: url(../img/test-bg.jpg) no-repeat center center/cover;
-    display: flex;
-    align-items: top;
-    padding: 40px;
-    justify-content: center;
-    color: #fff;
-    }
-
-    #showcase-3 .info-girl-1{
-        display: flex;
-        background-color: #f1a475d5;
-    }
-    #showcase-3 .info-girl-2{
-        display: flex;
-        background-color: #f1a475d5;
-    }
-    #showcase-3 img{
-        border-radius: 50%;
-    }
-    /* ----------------------------------------- */
-    /* EXPLICACION ABOUT */
-    #about-info{
-    display: flex;
-    height: 50vh;
-    }
-    #about-info .about-info-left{
-    flex: 2;
-    }
-    #about-info .about-info-right{
-    flex: 1;
-    }
-    #about-info .about-info-right img{
-        padding: 20px;
-    border-radius: 50%;
-    }
-    /* testimoniaL */
-    #testimonial {
-        background: url(../img/test-bg.jpg) no-repeat center center/cover;
-        text-align: center;
-        padding-top:30px ;
-    }
-    #testimonial h2{
-        font-size: 2rem;
-        color: #fff;
-    }
-    #testimonial .opinions{
-        display: flex;
-        gap: 40px;
-    }
-    #testimonial .opinions .opinions-box{
-        padding: 20px;
-        margin: 40px;
-        border-radius: 8px;
-        text-align: left;
-        opacity: 0.9;
-    }
-    #testimonial .opinions .opinions-box img{
-        width: 100px;
-        border-radius: 50%;
-        float: left;
-        margin-left: 10px;
-    }
-   /*--------------------------------------------*/
- 
-@media only screen and (max-width: 768px) {
-   #showcase{
-    height: 100vh;
-   }
-   #showcase .showcase-container h2{
-    font-size: 2.5rem;
-    margin: 10px;
-    padding: 40px;
-   }
-   #showcase .showcase-container p{
-       font-size: 20px;
-       padding: 0 0px;
-   }
-   #features {
-       display: inline;
-   }
-
-   #info{
-    display: flex;
-    min-height: 30vh;
-   }
-   #info .info-img{
-       background: url(../img/photo-1.jpg) no-repeat    center center/cover;
-       flex: 0 1 auto;
-   }
-   /* --------------------------------------- */
-   /* Menu Hamburger */
-
-     .menu-container{
-     display:block;
-     position: fixed;
-    }
-     #top-menu .top-menu-container{
-     display: none;
-     }
-   /* --------------------------------------- */
-   /* About Modo Movil */
-   #about-info .about-info-right{
-    flex: 0;
-   }
-   #testimonial .opinions{
+/* --------------------------------------- */
+#facciones {
+    flex-wrap: wrap;
     flex-direction: column;
-    gap: 10px;
-   }
+    display: flex;
+    padding: 50px;
+    background-color: #6b19a1c4;
+    box-shadow: #000000 10px 10px 10px;
+    margin: 50px;
+    
+}
+#facciones .box{
+flex-wrap: wrap;
+background:url(../images/Dark_Series_-_Rarity_-_Fortnite.webp) no-repeat center center/cover;
+
+}
+.box{
+margin: 30px;
+box-shadow: #000000 10px 10px 10px;
+}
+.box figure img{
+height: 300px;
+width: 300px;
+margin: auto;
+
+
+}
+
+/* ----------------------------- */
+#facciones h4{
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    text-shadow: #000000 5px 5px 0px;
+}
+#facciones p{
+    padding: 10px 20px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-shadow: #000000 10px 10px 10px;
+
+}
+#facciones figure img{
+padding: 0px;
+display: flex;
+justify-items: center;
+align-content: center;
+}
+/* ---------------------------------------------------- */
+.lideres{
+background: url(../images/cunadelcubo.png) no-repeat top center/cover;
+}
+.lideres-jefes{
+    border-top: #ffd90080 solid 5px;
+    background-color: #000000b0;
+    height: 100vh;
+}#facciones {
+    flex: 2;
+    flex-wrap: nowrap;
+    display: flex;
+    padding: 50px;
+    background-color: #6b19a1c4;
+    box-shadow: #000000 10px 10px 10px;
+    margin: 50px;
+    
+}
+#facciones .box{
+flex-wrap: wrap;
+background:url(../images/Dark_Series_-_Rarity_-_Fortnite.webp) no-repeat center center/cover;
+
+}
+.box{
+margin: 30px;
+box-shadow: #000000 10px 10px 10px;
+}
+
+/* ----------------------------- */
+#facciones h4{
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    text-shadow: #000000 5px 5px 0px;
+}
+#facciones p{
+    padding: 10px 20px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-shadow: #000000 10px 10px 10px;
+
+}
+#facciones figure img{
+padding: 0px;
+border-radius: 50%;
+display: flex;
+justify-items: center;
+align-content: center;
+}
+/* ---------------------------- */
+#Unete{
+    padding-top: 50px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background: url(../images/Gold_Rift_Opening_-_The_End_-_Fortnite.gif) no-repeat center center/cover;
+}
+form {
+
+}
+#Unete label,p{
+    padding-top: 10px;
+    color: #f7cb6c;
+    font-size: 1.5rem;
+}
+@media only screen and (max-width: 768px) {
+    #showcase{
+     height: 100vh;
+    }
+    #showcase .showcase-container h2{
+     font-size: 2.5rem;
+     margin: 10px;
+     padding: 40px;
+    }
+    #showcase .showcase-container p{
+        font-size: 20px;
+        padding: 0 0px;
+    }
+    #features {
+        display: inline;
+    }
+ 
+    #info{
+     display: flex;
+     min-height: 30vh;
+    }
+    #info .info-img{
+        background: url(../img/photo-1.jpg) no-repeat    center center/cover;
+        flex: 0 1 auto;
+    }
 }
